@@ -5,8 +5,8 @@ var bodyParser = require("body-parser");
 var cors = require("cors");
 var request = require("request");
 var twilio = require("twilio")
-var accountSid = 'AC8dc928c403b995bca691f53640e35f55'; 
-var authToken = '3daedbb1427aa79d6437765ef6129455';
+var accountSid = ; 
+var authToken = ;
 var client = twilio(accountSid, authToken);
 
 var app = express();  //set our express function call to app so we can use app.kdjflaj later.
@@ -27,8 +27,8 @@ app.get("/api/message", function(req, res) {
 });
 app.post("/api/send_text_message", function(req, res) {
 	console.log(req.body.message);
-	request.post("https://" + accountSid + ":" + authToken + "@api.twilio.com/2010-04-01/Accounts/")
-	res.send();
+	// request.post("https://" + accountSid + ":" + authToken + "@api.twilio.com/2010-04-01/Accounts/" + accountSid + "/Messages")
+	// res.send();
 })
 
 client.messages.create({ 
